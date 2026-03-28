@@ -1,28 +1,28 @@
-# 🎓 No Retake — Student Guide to University Professors
+# No Retake — Student Guide to University Professors
 
 > A web platform that helps university students make informed decisions about courses by providing detailed information about professors — their teaching style, grading patterns, disciplines, and student success statistics.
 
 ---
 
-## 📌 Overview
+## Overview
 
 **No Retake** is a full-stack web application built with **Angular** (frontend) and **Django REST Framework** (backend). Students can register, browse professor profiles, view discipline-specific statistics, and see aggregated pass rates — all to help them strategically plan their academic journey.
 
 ---
 
-## 🚀 Features
+## Features
 
-- 🔐 **JWT Authentication** — Secure registration, login, and logout
-- 👤 **Student Profile** — Personal dashboard with account information
-- 🧑‍🏫 **Professor Directory** — Browse and search all university professors
-- 📚 **Discipline Info** — See which courses each professor teaches
-- ⭐ **Rating System** — Community-driven 5-star professor ratings
-- 📊 **Pass Rate Statistics** — Number and percentage of students who passed each discipline under a given professor
-- 💬 **Student Reviews** — Leave and read feedback about professors
+- **JWT Authentication** — Secure registration, login, and logout
+- **Student Profile** — Personal dashboard with account information
+-  **Professor Directory** — Browse and search all university professors
+- **Discipline Info** — See which courses each professor teaches
+- **Rating System** — Community-driven 5-star professor ratings
+- **Pass Rate Statistics** — Number and percentage of students who passed each discipline under a given professor
+- **Student Reviews** — Leave and read feedback about professors
 
 ---
 
-## 🛠️ Tech Stack
+## Tech Stack
 
 | Layer     | Technology                        |
 |-----------|-----------------------------------|
@@ -35,7 +35,7 @@
 
 ---
 
-## 📁 Project Structure
+## Project Structure
 
 ```
 profinsight/
@@ -56,7 +56,7 @@ profinsight/
 
 ---
 
-## 🗄️ Backend Models
+## Backend Models
 
 | Model          | Description                                              |
 |----------------|----------------------------------------------------------|
@@ -69,7 +69,7 @@ profinsight/
 
 ---
 
-## 🔗 API Endpoints (Summary)
+## API Endpoints (Summary)
 
 ### Auth
 | Method | Endpoint              | Description         |
@@ -107,7 +107,7 @@ profinsight/
 
 ---
 
-## 🖥️ Frontend Routes
+## Frontend Routes
 
 | Path                    | Component            | Description                  |
 |-------------------------|----------------------|------------------------------|
@@ -119,7 +119,7 @@ profinsight/
 
 ---
 
-## ⚙️ Getting Started
+## Getting Started
 
 ### Backend
 ```bash
@@ -141,7 +141,7 @@ ng serve
 
 ---
 
-## 👥 Group Members
+## Group Members
 
 | Name | GitHub |
 |------|--------|
@@ -155,7 +155,7 @@ ng serve
 
 ---
 
-## 📬 Postman Collection
+## Postman Collection
 
 A full Postman collection with all endpoints and example responses is available in the `/postman` directory of this repository.
 
