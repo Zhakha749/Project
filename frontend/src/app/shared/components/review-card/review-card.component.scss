@@ -1,0 +1,79 @@
+.rcard {
+  padding: 18px 20px;
+  display: flex; flex-direction: column; gap: 12px;
+
+  &__header {
+    display: flex; align-items: flex-start;
+    justify-content: space-between; gap: 12px; flex-wrap: wrap;
+  }
+
+  &__meta { display: flex; align-items: center; gap: 10px; flex-wrap: wrap; }
+
+  &__author {
+    display: flex; align-items: center; gap: 4px;
+    font-weight: 600; font-size: .9rem;
+  }
+
+  &__avatar-icon { font-size: 22px; height: 22px; width: 22px; color: var(--color-text-muted); }
+
+  &__badge {
+    display: inline-flex; align-items: center; gap: 3px;
+    font-size: .72rem; font-weight: 600; padding: 2px 8px;
+    border-radius: 12px;
+    mat-icon { font-size: 13px; height: 13px; width: 13px; }
+
+    &--verified { background: #e8f5e9; color: #2e7d32; }
+  }
+  .dark-theme &__badge--verified { background:#1b3a1f; color:#81c784; }
+
+  &__date { font-size: .78rem; }
+
+  &__scores { display: flex; align-items: center; gap: 12px; flex-shrink: 0; }
+
+  &__score {
+    display: flex; align-items: center; gap: 3px;
+    font-weight: 600; font-size: .9rem;
+    mat-icon { font-size: 16px; height: 16px; width: 16px; }
+  }
+
+  &__text { margin: 0; font-size: .9rem; line-height: 1.6; color: var(--color-text); }
+
+  // Sub-ratings mini bars
+  &__subratings {
+    display: grid; grid-template-columns: repeat(2,1fr); gap: 6px 16px;
+  }
+
+  &__subrating {
+    display: flex; align-items: center; gap: 6px; font-size: .78rem;
+    span:first-child { width: 90px; flex-shrink: 0; }
+    span:last-child  { width: 16px; text-align: right; }
+  }
+
+  &__subbar {
+    flex: 1; height: 5px; background: var(--color-border);
+    border-radius: 3px; overflow: hidden;
+
+    &-fill {
+      height: 100%; border-radius: 3px;
+      background: var(--color-primary); transition: width .3s;
+    }
+  }
+
+  &__marker {
+    display: flex; align-items: center; gap: 6px;
+    font-size: .82rem; color: #e65100; opacity: .7;
+    mat-icon { font-size: 16px; height: 16px; width: 16px; }
+  }
+
+  &__footer {
+    display: flex; align-items: center; justify-content: space-between;
+    border-top: 1px solid var(--color-border); padding-top: 10px;
+    margin-top: 4px;
+  }
+
+  &__votes { display: flex; align-items: center; gap: 4px; font-size: .85rem; }
+
+  &__vote-count { font-weight: 600; min-width: 20px; text-align: center; }
+
+  &__report { font-size: .8rem; }
+}

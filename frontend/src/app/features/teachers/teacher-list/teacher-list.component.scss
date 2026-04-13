@@ -1,0 +1,50 @@
+.tlist {
+  display: flex; gap: 24px; align-items: flex-start; padding-top: 24px;
+
+  // ── Sidebar ───────────────────────────────────────────────────────────────
+  &__sidebar {
+    width: 260px; flex-shrink: 0; padding: 20px;
+    display: flex; flex-direction: column; gap: 16px;
+    position: sticky; top: 80px;
+  }
+
+  &__sidebar-title { font-size: 1.1rem; font-weight: 700; margin: 0; }
+
+  &__filter-group {
+    display: flex; flex-direction: column; gap: 8px;
+  }
+
+  &__filter-label {
+    font-size: .8rem; font-weight: 600; text-transform: uppercase;
+    letter-spacing: .5px; color: var(--color-text-muted); margin: 0;
+  }
+
+  // ── Main ──────────────────────────────────────────────────────────────────
+  &__main { flex: 1; min-width: 0; }
+
+  &__topbar { display: flex; align-items: center; margin-bottom: 20px; }
+
+  &__heading { font-size: 1.6rem; font-weight: 700; margin: 0; }
+
+  &__count { font-size: 1rem; margin-left: 8px; }
+
+  &__grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(200px, 1fr));
+    gap: 16px;
+  }
+
+  &__empty {
+    display: flex; flex-direction: column; align-items: center;
+    gap: 12px; padding: 60px 0; color: var(--color-text-muted);
+    mat-icon { font-size: 48px; height: 48px; width: 48px; }
+  }
+}
+
+// Mobile: stack sidebar above content
+@media (max-width: 768px) {
+  .tlist {
+    flex-direction: column;
+    &__sidebar { width: 100%; position: static; }
+  }
+}

@@ -1,0 +1,38 @@
+<a class="tcard card"
+   [routerLink]="['/teachers', teacher().id]"
+   (mouseenter)="showRadar = true"
+   (mouseleave)="showRadar = false">
+
+  <!-- Photo -->
+  <div class="tcard__photo">
+    @if (teacher().photo) {
+      <img [src]="teacher().photo" [alt]="teacher().full_name" />
+    } @else {
+      <mat-icon class="tcard__photo-icon">person</mat-icon>
+    }
+    @if (teacher().is_verified) {
+      <span class="tcard__verified" matTooltip="Verified teacher">
+        <mat-icon>verified</mat-icon>
+      </span>
+    }
+  </div>
+
+  <!-- Info -->
+  <div class="tcard__body">
+    <div class="tcard__top">
+      <h3 class="tcard__name">{{ teacher().full_name }}</h3>
+      <app-rating-badge [value]="teacher().average_ratings.overall" />
+    </div>
+    <span class="tcard__age text-muted">{{ teacher().age_range }} yrs · {{ teacher().review_count }} reviews</span>
+  </div>
+
+  <!-- Radar preview on hover -->
+  @if (showRadar && teacher().average_ratings.overall > 0) {
+    <div class="tcard__radar">
+      <app-radar-chart
+        [ratings]="teacher().average_ratings"
+        size="180px"
+        primaryLabel="Ratings" />
+    </div>
+  }
+</a>

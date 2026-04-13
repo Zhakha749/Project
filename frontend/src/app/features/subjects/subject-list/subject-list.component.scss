@@ -1,0 +1,42 @@
+.slist {
+  padding-top: 24px;
+
+  &__topbar {
+    display: flex; align-items: center; gap: 16px;
+    flex-wrap: wrap; margin-bottom: 16px;
+  }
+
+  &__heading { font-size: 1.6rem; font-weight: 700; margin: 0; flex: 1; }
+
+  &__search { width: 280px; }
+
+  // Category tabs (custom pill tabs, not MatTabGroup to avoid extra routing)
+  &__tabs {
+    display: flex; gap: 8px; flex-wrap: wrap; margin-bottom: 20px;
+  }
+
+  &__tab {
+    padding: 6px 18px; border-radius: 20px; border: 1px solid var(--color-border);
+    background: transparent; cursor: pointer; font-size: .85rem; font-weight: 500;
+    color: var(--color-text-muted); transition: all var(--transition);
+
+    &:hover { border-color: var(--color-primary); color: var(--color-primary); }
+
+    &--active {
+      background: var(--color-primary); border-color: var(--color-primary);
+      color: #fff;
+    }
+  }
+
+  &__grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(260px, 1fr));
+    gap: 16px;
+  }
+
+  &__empty {
+    display: flex; flex-direction: column; align-items: center;
+    gap: 12px; padding: 60px 0; color: var(--color-text-muted);
+    mat-icon { font-size: 48px; height: 48px; width: 48px; }
+  }
+}
